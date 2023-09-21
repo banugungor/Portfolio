@@ -614,6 +614,28 @@ img {
   margin-bottom: 1.25rem;
 }
 /*=============== PROJECTS ===============*/
+.projects {
+  background-color: var(--container-color);
+  transition: background-color 0.4s;
+}
+.projects__container {
+  row-gap: 2rem;
+}
+.projects__card {
+  padding: 1rem 1rem 2rem;
+  transition: background-color 0.4s;
+  background-color: var(--white-color);
+}
+.projects__image {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+.projects__button{
+  position: absolute;
+  right: 1rem;
+  bottom: -1.5rem;
+  padding: 1rem;
+}
 
 /*=============== CONTACT ===============*/
 .contact {
@@ -913,8 +935,8 @@ img {
   }
   .nav__link-button:hover {
     color: var(--white-color);
-  }.nav__link-button::after {
-    background-color: transparent;
-   }
-  
   }
+  .nav__link-button::after {
+    background-color: transparent;
+  }
+}
