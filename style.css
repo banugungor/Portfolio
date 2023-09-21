@@ -450,7 +450,40 @@ img {
   }
 }
 /*=============== BUTTON ===============*/
-
+.button,
+.button__ghost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  
+}
+.button {
+  background-color: var(--black-color);
+  padding: 1.1rem 1.5rem;
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+  transition: background-color 0.4s;
+ 
+}
+.button i {
+  font: 1.5rem sans-serif;
+}
+.button:hover {
+  background-color: var(--first-color);
+}
+.button__ghost {
+  border: 3px solid var(--black-color);
+  color: var(--black-color);
+  padding: 0.5rem;
+  transition: border 0.4s, color 0.4s;
+}
+.button__ghost i {
+  font-size: 1.25rem;
+}
+.button__ghost:hover{
+  border: 3px solid var(--first-color);
+}
 /*=============== ABOUT ===============*/
 .about {
   background-color: var(--container-color);
@@ -486,6 +519,49 @@ img {
   border-bottom: 4px solid var(--first-color);
   transition: background-color 0.4s;
 }
+.about__perfil .geometric-box {
+  top: 1.5rem;
+  right: -2.8rem;
+}
+.about__line {
+  filter: invert(1);
+  right: -1.25rem;
+  top: 6rem;
+  width: 50px;
+  transition: filter 0.4s;
+}
+.about__box {
+  width: 40px;
+  height: 40px;
+  background-color: var(--first-color);
+  right: -0.5rem;
+  bottom: 1.5rem;
+}
+.about__info {
+  padding-left: 1.25rem;
+}
+
+.about__description {
+  position: relative;
+  color: var(--title-color);
+  margin-bottom: 1.5rem;
+}
+.about__description::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: var(--title-color);
+  position: absolute;
+  left: -1.75rem;
+  top: 0.5rem;
+}
+
+.about__list {
+  list-style: square;
+  color: var(--title-color);
+  margin-bottom: 3rem;
+}
+
 /*=============== SERVICES ===============*/
 
 /*=============== PROJECTS ===============*/
@@ -506,7 +582,21 @@ img {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
-
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+  .home__image {
+    width: 180px;
+  }
+  .about__image {
+    width: 180px;
+  }
+  .about__shadow {
+    height: 330px;
+    right: -2.5rem;
+  }
+}
 /* For medium devices */
 
 /* For large devices */
