@@ -23,7 +23,6 @@ const linkAction = () => {
 };
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
-
 /*=============== SHADOW HEADER ===============*/
 const shadowHeader = () => {
   const header = document.getElementById("header");
@@ -41,3 +40,7 @@ window.addEventListener("scroll", shadowHeader);
 /*=============== DARK LIGHT THEME ===============*/
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+/*=============== PAGE SCROLLS UP ===============*/
+$(document).ready(function () {
+  $(this).scrollTop(0);
+});

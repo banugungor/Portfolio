@@ -456,7 +456,6 @@ img {
   align-items: center;
   justify-content: center;
   column-gap: 0.5rem;
-  
 }
 .button {
   background-color: var(--black-color);
@@ -464,7 +463,6 @@ img {
   color: var(--white-color);
   font-weight: var(--font-medium);
   transition: background-color 0.4s;
- 
 }
 .button i {
   font: 1.5rem sans-serif;
@@ -481,7 +479,7 @@ img {
 .button__ghost i {
   font-size: 1.25rem;
 }
-.button__ghost:hover{
+.button__ghost:hover {
   border: 3px solid var(--first-color);
 }
 /*=============== ABOUT ===============*/
@@ -563,11 +561,148 @@ img {
 }
 
 /*=============== SERVICES ===============*/
-
+.services__container {
+  grid-template-columns: 250px;
+  justify-content: center;
+  row-gap: 2rem;
+  padding-top: 1rem;
+}
+.services__card {
+  position: relative;
+}
+.services__content {
+  height: 100%;
+  background-color: var(--body-color);
+  border: 4px solid var(--black-color);
+  padding: 6rem 1rem 3rem;
+  z-index: 5;
+  position: relative;
+  transition: background-color 0.4s, border 0.4s;
+}
+.services__border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--first-color);
+  top: 0;
+  left: 0;
+  transition: transform 0.4s;
+}
+.services__card:hover .services__border {
+  transform: translate(0.75rem, 0.75rem);
+}
+.services__icon {
+  position: relative;
+  display: inline-block;
+}
+.services__icon i {
+  font-size: 2rem;
+  color: var(--black-color);
+  position: relative;
+  z-index: 5;
+}
+.services__box {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: var(--first-color);
+  right: -2px;
+  top: -2px;
+}
+.services__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 1.25rem;
+}
 /*=============== PROJECTS ===============*/
 
 /*=============== CONTACT ===============*/
-
+.contact {
+  padding-bottom: 0;
+}
+.contact__container {
+  position: relative;
+  grid-template-rows: 300px max-content;
+  row-gap: 0;
+}
+.contact__data {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: var(--container-color);
+  padding: 3rem 1.5rem 3.5rem;
+  margin-left: auto;
+  border-bottom: 4px solid var(--first-color);
+  z-index: 5;
+  transition: background-color 0.4s;
+}
+.contact__data .section__title-2 {
+  margin: 0 0 1.5rem;
+  transform: translateX(-3rem);
+}
+.contact__description-1 {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin-bottom: 2rem;
+}
+.contact__description-2 {
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+}
+.contact__data .geometric-box {
+  top: 2rem;
+  right: 2.5rem;
+}
+.contact__mail {
+  position: relative;
+  background-color: var(--black-color);
+  padding: 5rem 1.5rem 2.5rem;
+  margin-top: -2.5rem;
+  transition: background-color 0.4s;
+}
+.contact__title {
+  color: var(--white-color);
+  font-size: var(--h2-font-size);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.contact__form,
+.contact__group {
+  display: grid;
+  row-gap: 1.25rem;
+}
+.contact__form {
+  position: relative;
+}
+.contact__box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.contact__input,
+.contact__button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  outline: none;
+  border: none;
+}
+.contact__input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-color);
+  border: 3px solid var(--black-color-light);
+  color: var(--white-color);
+  padding: 0.5rem 1rem;
+  font-weight: var(--font-medium);
+  transition: border 0.4s, background-color 0.4s;
+}
+.contact__input::placeholder {
+  color: var(--text-color-light);
+  transition: opacity 0.4s;
+}
+.contact__input:focus{
+  border: 3px solid var(--white-color);
+}
 /* Opaque placeholder */
 
 /* Move label up & sticky label */
