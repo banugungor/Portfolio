@@ -157,6 +157,25 @@
                 <div class="about__box"></div>
               </div>
             </div>
+            <div class="about__perfil">
+              <div class="about__image">
+                <img
+                  src="assets/img/about-perfil.jpg"
+                  alt="image"
+                  class="about__img"
+                />
+                <p class="perfil__name">Banu Güngör</p>
+                <p class="perfil__job__title">UI/UX Designer</p>
+                <div class="about__shadow"></div>
+                <div class="geometric-box"></div>
+                <img
+                  src="assets/img/random-lines.svg"
+                  alt=""
+                  class="about__line"
+                />
+                <div class="about__box"></div>
+              </div>
+            </div>
           </div>
 
           <div class="about__info">
@@ -284,7 +303,8 @@
                 <i class="ri-window-fill"></i> View
               </a>
             </div>
-          </article> <article class="projects_card">
+          </article>
+          <article class="projects_card">
             <div class="projects__image">
               <img
                 src="assets/img/project-1.jpg"
@@ -318,7 +338,6 @@
               </a>
             </div>
           </article>
-         
         </div>
       </section>
 
@@ -388,6 +407,7 @@
                   <label for="message" class="contact__label">Message</label>
                 </div>
               </div>
+              <p class="contact__message" id="contact-message"></p>
               <button type="submit" class="contact__button button">
                 <i class="ri-send-plane-line"></i>
                 Send
@@ -434,10 +454,23 @@
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <ul class="footer__links">
+          <li><a href="#about" class="footer__link">About</a></li>
+          <li><a href="#services" class="footer__link">Services</a></li>
+          <li><a href="#projects" class="footer__link">Projects</a></li>
+        </ul>
+        <span class="footer__copy">
+          &#169; All Rights Reserved By <a href="">Venus Studio</a>
+        </span>
+      </div>
+    </footer>
 
     <!--========== SCROLL UP ==========-->
-
+    <!-- Email -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Script -->
     <script src="app.js"></script>
   </body>
 </html>

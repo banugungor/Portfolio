@@ -497,7 +497,7 @@ img {
 }
 .perfil__container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   /* grid-template-rows: repeat(2, 1fr); */
   align-items: center;
   text-align: center;
@@ -655,7 +655,6 @@ img {
 .projects__card {
   padding: 1rem 1rem 2rem;
   transition: background-color 0.4s;
-  background-color: var(--white-color);
 }
 .projects__image {
   position: relative;
@@ -663,7 +662,7 @@ img {
   width: 350px;
   height: 232px;
 }
-.projects__image::before{
+.projects__image::before {
   content: "";
   position: absolute;
   top: 0;
@@ -728,6 +727,13 @@ img {
   color: var(--title-color);
   transition: color 0.4s;
 }
+.projects__link:hover,
+.projects__link:hover i {
+  color: var(--first-color);
+}
+.projects__card:hover {
+  background-color: var(--white-color);
+}
 /*=============== CONTACT ===============*/
 .contact {
   padding-bottom: 0;
@@ -740,10 +746,11 @@ img {
 .contact__data {
   position: relative;
   width: 300px;
-  height: 300px;
+  height: 350px;
   background-color: var(--container-color);
-  padding: 3rem 1.5rem 3.5rem;
+  padding: 2.5rem 1.5rem 3.5rem;
   margin-left: auto;
+  margin-top: -2rem;
   border-bottom: 4px solid var(--first-color);
   z-index: 5;
   transition: background-color 0.4s;
@@ -898,7 +905,34 @@ img {
   background-color: var(--first-color);
 }
 /*=============== FOOTER ===============*/
-
+.footer {
+  background-color: var(--black-color);
+}
+.footer__container {
+  padding-block: 3rem 2rem;
+  row-gap: 2.5rem;
+}
+.footer__links {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+}
+.footer__link {
+  color: var(--white-color);
+  transition: color 0.4s;
+}
+.footer__link:hover {
+  color: var(--text-color-light);
+}
+.footer__copy {
+  color: var(--text-color-light);
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+.footer__copy a {
+  color: var(--white-color);
+  font-weight: var(--font-medium);
+}
 /*=============== SCROLL BAR ===============*/
 
 /*=============== SCROLL UP ===============*/
@@ -964,19 +998,30 @@ img {
   .dark-theme .contact__social-arrow {
     filter: none;
   }
+  .perfil__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (min-width: 768px) {
   .services__container {
-    grid-template-columns: repeat(2, 250px);
+    grid-template-columns: repeat(3, 250px);
+    gap: 3rem;
   }
   .projects__container {
     grid-template-columns: repeat(2, 350px);
+  }
+  .perfil__container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 /* For large devices */
 @media screen and (min-width: 1150px) {
   .container {
     margin-inline: auto;
+  }
+  .header {
+    height: 3rem;
+    padding: 0.5rem;
   }
   .section {
     padding-block: 7rem 2rem;
@@ -1029,5 +1074,9 @@ img {
   }
   .nav__link-button::after {
     background-color: transparent;
+  }
+  .perfil__container {
+    margin-left: -15rem;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

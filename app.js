@@ -32,7 +32,14 @@ const shadowHeader = () => {
 };
 window.addEventListener("scroll", shadowHeader);
 /*=============== EMAIL JS ===============*/
+const contactForm = document.getElementById("contact-form");
+const contactMessage = document.getElementById("contact-message");
 
+const sendEmail = (e) => {
+  e.preventDefault();
+};
+
+contactForm.addEventListener("submit", sendEmail);
 /*=============== SHOW SCROLL UP ===============*/
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
@@ -41,6 +48,3 @@ window.addEventListener("scroll", shadowHeader);
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 /*=============== PAGE SCROLLS UP ===============*/
-$(document).ready(function () {
-  $(this).scrollTop(0);
-});
