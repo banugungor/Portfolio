@@ -327,6 +327,8 @@ img {
 .home__name {
   font-size: var(--biggest-font-size);
   text-align: center;
+  width: 650px;
+  margin-left: -10rem;
 }
 
 .home__perfil {
