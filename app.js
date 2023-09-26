@@ -37,6 +37,26 @@ const contactMessage = document.getElementById("contact-message");
 
 const sendEmail = (e) => {
   e.preventDefault();
+  // serviceID - templateID - #form - publicKey
+  emailjs
+    .sendForm(
+      "service_z3lnij9",
+      "template_qwvnxhe",
+      "#contact-form",
+      "WTl0GYBkkRgIZnChA"
+    )
+    .then(
+      () => {
+        contactMessage.textContent = "Message sent successfully✅";
+        setTimeout(() => {
+          contactMessage.textContent = "";
+        }, 5000);
+        contactForm.reset();
+      },
+      () => {
+        contactMessage.textContent = "Message could not send. (Service Error)❌";
+      }
+    );
 };
 
 contactForm.addEventListener("submit", sendEmail);
